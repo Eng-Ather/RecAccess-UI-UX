@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
 
   img: {
     width: "100%",
-    margin: "auto",
+    margin: "auto",    // margin: "auto",
+
     height: "70%",
   }
 })
