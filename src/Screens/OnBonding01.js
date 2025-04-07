@@ -4,12 +4,13 @@ import onbonding01image from "../Assets/Images/onbonding01image.png"
 import ScreenLayout from "../Constants/ScreenLayout.js"
 import Typography from '../Constants/Typography.js'
 import { useNavigation } from '@react-navigation/native'
-import { Button } from '../Components/index.js'
+import { Button, Heading } from '../Components/Index.js'
 
 const OnBonding01 = () => {
   const navigation = useNavigation();
   return (
     <View style={ScreenLayout.container}>
+      
 
       {/* <View style={{width:"100%",padding:3}}> */}
       <View style={{ width: "100%", padding: 3 }}>
@@ -22,8 +23,7 @@ const OnBonding01 = () => {
 
 
       <View style={{ width: 190, height: 72 }}>
-        <Text style={[Typography.headdingText, { textAlign: "center" }]}>
-          Meet people with same interests</Text>
+        <Heading children="Meet people with same interests" />
       </View>
 
       <View style={{ width: 255, height: 65 }}>

@@ -1,5 +1,3 @@
-import Button from "./Button/Index";
 
-export {
-    Button
-}
+export {default as Button} from "./Button/Index"
+export {default as Heading} from "./Heading/Index"
