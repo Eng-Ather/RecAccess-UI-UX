@@ -1,10 +1,10 @@
 import { StyleSheet, Image, Text, View } from 'react-native'
 import React from 'react'
-import Button from "../Components/UiComponent/Button.js"
 import onbonding01image from "../Assets/Images/onbonding01image.png"
 import ScreenLayout from "../Constants/ScreenLayout.js"
 import Typography from '../Constants/Typography.js'
 import { useNavigation } from '@react-navigation/native'
+import { Button } from '../Components/index.js'
 
 const OnBonding01 = () => {
   const navigation = useNavigation();
@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
 
   img: {
     width: "100%",
-    margin: "auto",    // margin: "auto",
-
+    margin: "auto",
     height: "70%",
   }
 })
