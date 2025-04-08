@@ -1,18 +1,20 @@
-
 import React, { useEffect } from 'react'; 
 import { StyleSheet, Image, View } from 'react-native';
-import logo from "../Assets/Images/logo.png"; 
 import ScreenLayout from '../Constants/ScreenLayout';
-  const Splash = ({navigation}) => {
+import { Logo } from '../Constants/Images';
+
+
+
+const Splash = ({navigation}) => {
     useEffect(() => {
       setTimeout(() => {
-        navigation.replace("OnBonding01");
+        navigation.replace("OnbondingSlider");
       }, 1500);
     });
   
   return (
     <View style={ScreenLayout.container}>
-      <Image source={logo} style={styles.logo} />
+      <Image source={Logo} style={styles.logo} />
     </View>
   );
 };
@@ -20,7 +22,6 @@ import ScreenLayout from '../Constants/ScreenLayout';
 export default Splash;
 
 const styles = StyleSheet.create({
-
   logo: {
     width: 200, 
     height: 200, 
