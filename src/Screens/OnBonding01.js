@@ -4,7 +4,9 @@ import onbonding01image from "../Assets/Images/onbonding01image.png"
 import ScreenLayout from "../Constants/ScreenLayout.js"
 import Typography from '../Constants/Typography.js'
 import { useNavigation } from '@react-navigation/native'
-import { Button, Heading } from '../Components/Index.js'
+import { Button, Heading } from '../Components/index.js'
+
+
 
 const OnBonding01 = () => {
   const navigation = useNavigation();
