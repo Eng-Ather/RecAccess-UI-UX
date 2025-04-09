@@ -89,7 +89,7 @@ const OnboardingSlider = () => {
             buttonText={currentIndex == 0 ? 'Continue' : 'Next'}
             onPress={
               currentIndex == 2
-                ? () => navigation.navigate('Login1')
+                ? () => navigation.navigate('Signup01')
                 : handleNext
             }
           />

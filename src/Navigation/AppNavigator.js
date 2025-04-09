@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import Splash from '../Screens/Splash'
 import OnboardingSlider from '../Screens/OnBondingSlider'
 import Login1 from '../Screens/Login1'
+import Signup01 from '../Screens/Signup01'
 
 const Stack = createNativeStackNavigator()
 
@@ -14,6 +15,7 @@ const AppNavigator = () => {
        
             <Stack.Screen name="Splash" component={Splash} /> 
             <Stack.Screen name="OnbondingSlider" component={OnboardingSlider} />
+            <Stack.Screen name="Signup01" component={Signup01} />
             <Stack.Screen name="Login1" component={Login1}/>
             </Stack.Navigator>
            
