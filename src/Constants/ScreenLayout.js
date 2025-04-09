@@ -7,7 +7,6 @@ export default{
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: '#fff', 
-            margin:3,
             borderColor:"red",
             borderWidth: 2,        
             borderRadius: 10, 
