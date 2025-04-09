@@ -1,17 +1,17 @@
-
 import { Text } from 'react-native';
 import React from 'react';
+import Typography from '../../Constants/Typography';
 
-const Heading = ({
+const Txt = ({
   size = 24,
   weight = '700',
-  color = 'black',
+  color = Typography.primaryColor,
   textalign = 'center',
-  mt = 2,
-  mr = 2,
-  mb = 2,
-  ml = 2,
-  lh = 36,
+  mt ,
+  mr ,
+  mb ,
+  ml ,
+  lh ,
   children,
 }) => {
   const allStyles = [
@@ -29,4 +29,4 @@ const Heading = ({
   return <Text style={allStyles}>{children}</Text>;
 };
 
-export default Heading;
+export default Txt;

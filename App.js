@@ -133,6 +133,7 @@
 import React from 'react'
 import AppNavigator from './src/Navigation/AppNavigator.js'
 
+
 const App = () => {
   return <AppNavigator/>
 }
