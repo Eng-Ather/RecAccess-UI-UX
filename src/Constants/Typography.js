@@ -20,6 +20,8 @@ plainText:{
     letterSpacing:0,
     color:"#888888",
     lineHeight:23,
+
+
 }
 
 }
