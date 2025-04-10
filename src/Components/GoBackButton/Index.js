@@ -19,9 +19,8 @@ export default GoBackButton;
 const styles = StyleSheet.create({
   button: {
     padding: 8,
-    borderWidth: 1,
     borderColor: 'gray',
-    borderRadius: 6,
+    borderRadius: 10,
     backgroundColor: 'white',
     alignSelf: 'flex-start',
   },

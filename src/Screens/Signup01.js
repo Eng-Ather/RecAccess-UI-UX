@@ -1,10 +1,12 @@
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Button, GoBackBtn, InputField, Txt} from '../Components';
+import { useNavigation } from '@react-navigation/native';
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 
 const Signup01 = () => {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <View style={styles.btn}>
@@ -19,7 +21,7 @@ const Signup01 = () => {
         <InputField placeholder={'Email'} />
         <InputField placeholder={'Phone'} />
         <InputField placeholder={'. . . . . . '} />
-        <Button buttonText="Sign up" clr="white" />
+        <Button onPress={() => navigation.navigate("ForgetPassword01") } buttonText="Sign up" clr="white" />
       </View>
       <View style={styles.container3}>
         <Txt size={16} children={'-or login with-'} />

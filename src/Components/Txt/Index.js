@@ -7,6 +7,7 @@ const Txt = ({
   weight = '700',
   color = Typography.primaryColor,
   textalign = 'center',
+  styles,
   mt ,
   mr ,
   mb ,
@@ -26,7 +27,7 @@ const Txt = ({
     { lineHeight: lh },
   ];
 
-  return <Text style={allStyles}>{children}</Text>;
+  return <Text style={[allStyles, styles]}>{children}</Text>;
 };
 
 export default Txt;
