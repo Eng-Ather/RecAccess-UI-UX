@@ -38,19 +38,22 @@ const OnboardingSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    console.log('abc');
     if (currentIndex < slides.length - 1) {
-      flatListRef.current.scrollToIndex({index: currentIndex + 1});
-      setCurrentIndex(prev => prev + 1);
+      flatListRef.current?.scrollToIndex({
+        index: currentIndex + 1,
+        animated: true,
+      });
     } else {
-      navigation.navigate('Login');
+      navigation.navigate('Signup01');
     }
   };
 
-  const handleScroll = event => {
-    const scrollPosition = event.nativeEvent.contentOffset.x;
-    const index = Math.round(scrollPosition / SCREEN_WIDTH); // Assuming full-screen slides
-    setCurrentIndex(index);
+  const handleScroll = (e) => {
+    const scrollX = e.nativeEvent.contentOffset.x;
+    const newIndex = Math.round(scrollX / SCREEN_WIDTH);
+    if (newIndex !== currentIndex) {
+      setCurrentIndex(newIndex);
+    }
   };
 
   const renderItem = ({item}) => (
@@ -110,7 +113,12 @@ const OnboardingSlider = () => {
       renderItem={renderItem}
       scrollEnabled
       onScroll={handleScroll}
-      scrollEventThrottle={50}
+      scrollEventThrottle={16}
+      getItemLayout={(data, index) => ({
+        length: SCREEN_WIDTH,
+        offset: SCREEN_WIDTH * index,
+        index,
+      })}
     />
   );
 };
@@ -135,3 +143,4 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH / 1.4,
   },
 });
+

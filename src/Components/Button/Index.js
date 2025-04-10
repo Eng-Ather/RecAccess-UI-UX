@@ -6,12 +6,11 @@ const Button = ({
   onPress,
   bgColor = 'black',
   clr = 'black',
-  fntweight,
 }) => {
   const allStyles = [{backgroundColor: bgColor}, {color: clr}];
   return (
     <TouchableOpacity onPress={onPress} style={[Styles.buttonStyle, allStyles]}>
-      <Text style={{fontWeight: fntweight, color: clr}}>{buttonText}</Text>
+      <Text style={{ color: clr}}>{buttonText}</Text>
     </TouchableOpacity>
   );
 };
