@@ -1,11 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {
-  View,
-  Image,
-  FlatList,
-  Dimensions,
-  StyleSheet,
-} from 'react-native';
+import {View, Image, FlatList, Dimensions, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {
   onBonding01Img,
@@ -44,12 +38,19 @@ const OnboardingSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
+    console.log('abc');
     if (currentIndex < slides.length - 1) {
       flatListRef.current.scrollToIndex({index: currentIndex + 1});
       setCurrentIndex(prev => prev + 1);
     } else {
       navigation.navigate('Login');
     }
+  };
+
+  const handleScroll = event => {
+    const scrollPosition = event.nativeEvent.contentOffset.x;
+    const index = Math.round(scrollPosition / SCREEN_WIDTH); // Assuming full-screen slides
+    setCurrentIndex(index);
   };
 
   const renderItem = ({item}) => (
@@ -107,7 +108,9 @@ const OnboardingSlider = () => {
       showsHorizontalScrollIndicator
       keyExtractor={item => item.id}
       renderItem={renderItem}
-      scrollEnabled={false}
+      scrollEnabled
+      onScroll={handleScroll}
+      scrollEventThrottle={50}
     />
   );
 };
